@@ -33,7 +33,7 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
 
     // 롬복
-    compileOnly 'org.projectlombok:lombok'
+    implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     // 테스트 의존성
