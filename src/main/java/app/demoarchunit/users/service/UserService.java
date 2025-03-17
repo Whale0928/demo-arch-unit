@@ -40,6 +40,7 @@ public class UserService {
 
     @Transactional
     public Optional<User> updateUser(Long id, User userDetails) {
+        System.out.println(logging());
         return userRepository.findById(id)
                 .map(existingUser -> {
                     existingUser.setName(userDetails.getName());
@@ -52,5 +53,9 @@ public class UserService {
     @Transactional
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    private String logging() {
+        return "logging";
     }
 }

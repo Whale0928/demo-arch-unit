@@ -48,7 +48,6 @@ public class EntityArchitectureTest {
                 .that().areAnnotatedWith(Entity.class)
                 .should(haveConstructorsWithAccessModifiers())
                 .because("엔티티의 생성자는 적절한 접근 제한자(protected, private)를 가져야 합니다");
-
         rule.check(importedClasses);
     }
 
